@@ -1,0 +1,761 @@
+{
+  "version": 22,
+  "encryptionVariant": "None",
+  "name": "LegacyCubemap",
+  "hasParentName": false,
+  "samplerDefinitionMap": {
+    "MatTexture": {
+      "reg": 0,
+      "access": "Read",
+      "precision": 0,
+      "allowUnorderedAccess": false,
+      "type": "Type2D",
+      "textureFormat": "",
+      "unknownInt": 1,
+      "unknownByte": 0,
+      "hasDefaultTexture": false,
+      "hasUnknownString": false,
+      "hasCustomTypeInfo": false
+    }
+  },
+  "propertyFieldMap": {
+    "CubemapRotation": {
+      "num": 1,
+      "type": 4,
+      "hasData": false
+    }
+  },
+  "dataOnly": true,
+  "passMap": {
+    "Transparent": {
+      "bitSet": "1111111111111111",
+      "fallback": "",
+      "hasDefaultBlendMode": false,
+      "flagDefaultValues": {},
+      "variantList": [
+        {
+          "isSupported": true,
+          "flags": {},
+          "shaderCodes": [
+            {
+              "platformShaderStage": {
+                "stageName": "Vertex",
+                "platformName": "ESSL_100",
+                "stage": "Vertex",
+                "platform": "ESSL_100"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "position": {
+                    "type": "Vec3",
+                    "attribute": "Position",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  },
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": -7409647602579586121,
+                "bgfxShaderData": {
+                  "magic": 1448298501,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "u_modelViewProj",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "CubemapRotation",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 1
+                    }
+                  ],
+                  "codeFile": "0.ESSL_100.Vertex.glsl"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Fragment",
+                "platformName": "ESSL_100",
+                "stage": "Fragment",
+                "platform": "ESSL_100"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": 2261858414651697001,
+                "bgfxShaderData": {
+                  "magic": 1179863045,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "s_MatTexture",
+                      "type": 0,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 1
+                    }
+                  ],
+                  "codeFile": "0.ESSL_100.Fragment.glsl"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Vertex",
+                "platformName": "Metal",
+                "stage": "Vertex",
+                "platform": "Metal"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "position": {
+                    "type": "Vec3",
+                    "attribute": "Position",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  },
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": -2515835981928994423,
+                "bgfxShaderData": {
+                  "attrs": [
+                    1,
+                    16
+                  ],
+                  "size": 960,
+                  "magic": 1448298501,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "u_modelViewProj",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 64,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_modelView",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 128,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_viewRect",
+                      "type": 2,
+                      "num": 1,
+                      "regIndex": 192,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "u_model",
+                      "type": 4,
+                      "num": 4,
+                      "regIndex": 208,
+                      "regCount": 16
+                    },
+                    {
+                      "name": "u_alphaRef4",
+                      "type": 2,
+                      "num": 1,
+                      "regIndex": 464,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "u_viewProj",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 480,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_invProj",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 544,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_prevWorldPosOffset",
+                      "type": 2,
+                      "num": 1,
+                      "regIndex": 608,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "u_view",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 624,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_proj",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 688,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_invViewProj",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 752,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_invView",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 816,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_prevViewProj",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 880,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_viewTexel",
+                      "type": 2,
+                      "num": 1,
+                      "regIndex": 944,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "CubemapRotation",
+                      "type": 4,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 4
+                    }
+                  ],
+                  "codeFile": "0.Metal.Vertex.metal"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Fragment",
+                "platformName": "Metal",
+                "stage": "Fragment",
+                "platform": "Metal"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": 753365226172015914,
+                "bgfxShaderData": {
+                  "attrs": [],
+                  "size": 896,
+                  "magic": 1179863045,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "u_modelViewProj",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_modelView",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 64,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_viewRect",
+                      "type": 18,
+                      "num": 1,
+                      "regIndex": 128,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "u_model",
+                      "type": 20,
+                      "num": 4,
+                      "regIndex": 144,
+                      "regCount": 16
+                    },
+                    {
+                      "name": "u_alphaRef4",
+                      "type": 18,
+                      "num": 1,
+                      "regIndex": 400,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "u_viewProj",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 416,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_invProj",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 480,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_prevWorldPosOffset",
+                      "type": 18,
+                      "num": 1,
+                      "regIndex": 544,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "u_view",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 560,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_proj",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 624,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_invViewProj",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 688,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_invView",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 752,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_prevViewProj",
+                      "type": 20,
+                      "num": 1,
+                      "regIndex": 816,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "u_viewTexel",
+                      "type": 18,
+                      "num": 1,
+                      "regIndex": 880,
+                      "regCount": 1
+                    },
+                    {
+                      "name": "s_MatTexture",
+                      "type": 17,
+                      "num": 0,
+                      "regIndex": 0,
+                      "regCount": 0
+                    }
+                  ],
+                  "codeFile": "0.Metal.Fragment.metal"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Vertex",
+                "platformName": "Direct3D_SM40",
+                "stage": "Vertex",
+                "platform": "Direct3D_SM40"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "position": {
+                    "type": "Vec3",
+                    "attribute": "Position",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  },
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": -2198454534404478534,
+                "bgfxShaderData": {
+                  "attrs": [
+                    1,
+                    16
+                  ],
+                  "size": 128,
+                  "magic": 1448298501,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "u_modelViewProj",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 0,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "CubemapRotation",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 64,
+                      "regCount": 4
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM40.Vertex.dxbc"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Fragment",
+                "platformName": "Direct3D_SM50",
+                "stage": "Fragment",
+                "platform": "Direct3D_SM50"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": -8343140126324037798,
+                "bgfxShaderData": {
+                  "attrs": [],
+                  "size": 0,
+                  "magic": 1179863045,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "s_MatTexture",
+                      "type": 48,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 1
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM50.Fragment.dxbc"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Fragment",
+                "platformName": "Direct3D_SM40",
+                "stage": "Fragment",
+                "platform": "Direct3D_SM40"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": -6102889597092467557,
+                "bgfxShaderData": {
+                  "attrs": [],
+                  "size": 0,
+                  "magic": 1179863045,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "s_MatTexture",
+                      "type": 48,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 1
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM40.Fragment.dxbc"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Vertex",
+                "platformName": "Direct3D_SM50",
+                "stage": "Vertex",
+                "platform": "Direct3D_SM50"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "position": {
+                    "type": "Vec3",
+                    "attribute": "Position",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  },
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": -7712239865419316034,
+                "bgfxShaderData": {
+                  "attrs": [
+                    1,
+                    16
+                  ],
+                  "size": 128,
+                  "magic": 1448298501,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "u_modelViewProj",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 0,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "CubemapRotation",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 64,
+                      "regCount": 4
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM50.Vertex.dxbc"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Vertex",
+                "platformName": "Direct3D_SM60",
+                "stage": "Vertex",
+                "platform": "Direct3D_SM60"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "position": {
+                    "type": "Vec3",
+                    "attribute": "Position",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  },
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": -4366989123637258899,
+                "bgfxShaderData": {
+                  "attrs": [
+                    1,
+                    16
+                  ],
+                  "size": 128,
+                  "magic": 1448298501,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "u_modelViewProj",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 0,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "CubemapRotation",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 64,
+                      "regCount": 4
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM60.Vertex.dxbc"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Fragment",
+                "platformName": "Direct3D_SM65",
+                "stage": "Fragment",
+                "platform": "Direct3D_SM65"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": 4968601203485338844,
+                "bgfxShaderData": {
+                  "attrs": [],
+                  "size": 0,
+                  "magic": 1179863045,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "s_MatTexture",
+                      "type": 48,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 1
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM65.Fragment.dxbc"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Fragment",
+                "platformName": "Direct3D_SM60",
+                "stage": "Fragment",
+                "platform": "Direct3D_SM60"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": 5616628518362300674,
+                "bgfxShaderData": {
+                  "attrs": [],
+                  "size": 0,
+                  "magic": 1179863045,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "s_MatTexture",
+                      "type": 48,
+                      "num": 1,
+                      "regIndex": 0,
+                      "regCount": 1
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM60.Fragment.dxbc"
+                }
+              }
+            },
+            {
+              "platformShaderStage": {
+                "stageName": "Vertex",
+                "platformName": "Direct3D_SM65",
+                "stage": "Vertex",
+                "platform": "Direct3D_SM65"
+              },
+              "shaderCode": {
+                "shaderInputMap": {
+                  "position": {
+                    "type": "Vec3",
+                    "attribute": "Position",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  },
+                  "texcoord0": {
+                    "type": "Vec2",
+                    "attribute": "TexCoord0",
+                    "isPerInstance": false,
+                    "hasPrecisionConstraint": false,
+                    "hasInterpolationConstraint": false
+                  }
+                },
+                "sourceHash": 4384199184134139764,
+                "bgfxShaderData": {
+                  "attrs": [
+                    1,
+                    16
+                  ],
+                  "size": 128,
+                  "magic": 1448298501,
+                  "hash": 1010703983,
+                  "uniforms": [
+                    {
+                      "name": "u_modelViewProj",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 0,
+                      "regCount": 4
+                    },
+                    {
+                      "name": "CubemapRotation",
+                      "type": 4,
+                      "num": 0,
+                      "regIndex": 64,
+                      "regCount": 4
+                    }
+                  ],
+                  "codeFile": "0.Direct3D_SM65.Vertex.dxbc"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
